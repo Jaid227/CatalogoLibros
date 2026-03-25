@@ -7,7 +7,7 @@ const booksDatabase = [
         genre: "Literatura",
         price: 300,
         description: "Novela de ficción y economía",
-        cover: "https://picsum.photos/id/1015/400/600"
+        cover: "imagenes/libro1.jpeg"
     },
     {
         id: "book2",
@@ -16,7 +16,7 @@ const booksDatabase = [
         genre: "Literatura",
         price: 300,
         description: "Propuesta teórica para superar el tope trifásico económico-político-social.",
-        cover: "https://picsum.photos/id/1018/400/600"
+        cover: "imagenes/libro2.jpeg"
     },
     {
         id: "book3",
@@ -25,7 +25,7 @@ const booksDatabase = [
         genre: "Literatura",
         price: 400,
         description: "Propuesta teórica para consolidar la civilización humana, mediante un sistema económico.",
-        cover: "https://picsum.photos/id/104/400/600"
+        cover: "imagenes/libro3.jpeg"
     }
 ];
 
@@ -62,7 +62,7 @@ const featuredStory = {
     genre: "Literatura",
     price: 300,
     description: "19 cuentos completos",
-    cover: "https://picsum.photos/id/104/600/400"
+    cover: "imagenes/cuento1.jpeg"
 };
 
 // Variables de estado

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Catálogo de Cuentos | Presentación Literaria</title>
+    <title>Emmanuel Ciaro | Exonomía de tracción</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome 6 (gratuito) para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,19 +17,49 @@
             <p class="subtitle">Explora mundos donde las palabras cobran vida</p>
         </div>
 
-        <div class="categories-container">
-            <button class="category-btn" data-category="fiction">Ficción</button>
-            <button class="category-btn" data-category="horror">Terror</button>
-            <button class="category-btn" data-category="drama">Drama</button>
-            <button class="category-btn" data-category="novel">Novela</button>
+        <!-- Botones principales -->
+        <div class="main-buttons-container">
+            <button id="books-main-btn" class="main-action-btn"> Libros</button>
+            <button id="stories-main-btn" class="main-action-btn"> Cuentos</button>
+        </div>
+
+        <!-- Carrusel de imágenes - AHORA CON IMÁGENES FUNCIONALES -->
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel1.jpeg" alt="Portada 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel2.jpeg" alt="Portada 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel3.jpeg" alt="Portada 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel4.jpeg" alt="Portada 4">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel5.jpeg" alt="Portada 5">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/carrusel6.jpeg" alt="Portada 6">
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+            <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+            <div class="carousel-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
         
         <footer class="main-footer">
             <div class="author-info">
                 <p><strong>Emmanuel Ciaro</strong></p>
                 <div class="contact-row">
-                    <span><i class="fas fa-phone-alt"></i> +52 55 1234 5678</span>
-                    <span><i class="fas fa-envelope"></i> EmmanuelCiaro@cuentos.mx</span>
+                    <span><i class="fas fa-phone-alt"></i> 5562076076</span>
+                    <span><i class="fas fa-envelope"></i> bioartmi.co@gmail.com</span>
                 </div>
                 <div class="social-icons">
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -42,26 +71,72 @@
         </footer>
     </main>
 
-    <!-- Pantalla de galería por categoría -->
-    <section id="gallery-screen" class="screen">
-        <div class="gallery-header">
-            <button id="back-to-main" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
-            <h2 id="category-title">Categoría</h2>
+    <!-- Pantalla de libros -->
+    <section id="books-screen" class="screen">
+        <div class="screen-header">
+            <button id="back-to-main-from-books" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            <h2>Libros</h2>
         </div>
-        <div id="books-grid" class="books-grid">
-            <!-- Aquí se renderizan dinámicamente las portadas (imágenes) -->
+        <div id="books-container" class="items-grid">
+            <!-- Aquí se renderizan los libros dinámicamente -->
         </div>
     </section>
 
-    <!-- Pantalla de detalle del libro -->
-    <section id="detail-screen" class="screen">
-        <div class="detail-header">
-            <button id="back-to-gallery" class="back-btn"><i class="fas fa-arrow-left"></i> Regresar</button>
+    <!-- Pantalla de categorías de cuentos -->
+    <section id="stories-categories-screen" class="screen">
+        <div class="screen-header">
+            <button id="back-to-main-from-stories" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            <h2>Cuentos</h2>
         </div>
-        <div id="book-detail-container" class="book-detail-card">
-            <!-- Contenido dinámico de descripción, autor, género, fecha, editorial -->
+        <div class="categories-container" id="stories-categories">
+            <button class="category-btn" data-story-category="mystery">Misterio</button>
+            <button class="category-btn" data-story-category="suspense">Suspenso</button>
+            <button class="category-btn" data-story-category="scifi">Ciencia Ficción</button>
+            <button class="category-btn" data-story-category="microfiction">Minificciones</button>
+        </div>
+        <!-- Imagen destacada con información y botón -->
+        <div class="featured-story">
+            <div class="featured-image">
+                <img id="featured-story-img" src="https://picsum.photos/id/104/600/400" alt="Libro destacado">
+            </div>
+            <div class="featured-info">
+                <h3 id="featured-title">Antología de Cuentos</h3>
+                <div class="featured-meta">
+                    <span id="featured-date"><i class="far fa-calendar-alt"></i> 15/01/2024</span>
+                    <span id="featured-genre"><i class="fas fa-tag"></i> Antología</span>
+                    <span id="featured-price"><i class="fas fa-dollar-sign"></i> 250 MXN</span>
+                </div>
+                <p id="featured-description" class="featured-description">Una colección única de cuentos que reúne lo mejor de la narrativa contemporánea. Historias que te transportarán a mundos imaginarios y te harán reflexionar sobre la vida.</p>
+                <button id="featured-whatsapp-btn" class="detail-whatsapp"><i class="fab fa-whatsapp"></i> Interesado en este libro</button>
+            </div>
         </div>
     </section>
+
+    <!-- Pantalla de galería de cuentos por categoría -->
+    <section id="stories-gallery-screen" class="screen">
+        <div class="screen-header">
+            <button id="back-to-categories" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+            <h2 id="stories-category-title">Categoría</h2>
+        </div>
+        <div id="stories-grid" class="items-grid">
+            <!-- Aquí se renderizan los cuentos dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Pantalla de detalle del libro/cuento -->
+    <section id="detail-screen" class="screen">
+        <div class="detail-header">
+            <button id="back-to-previous" class="back-btn"><i class="fas fa-arrow-left"></i> Regresar</button>
+        </div>
+        <div id="book-detail-container" class="book-detail-card">
+            <!-- Contenido dinámico -->
+        </div>
+    </section>
+
+    <!-- Modal para imagen en pantalla completa -->
+    <div id="fullscreen-modal" class="fullscreen-modal">
+        <img id="fullscreen-image" src="" alt="Imagen ampliada">
+    </div>
 
     <script src="script.js"></script>
 </body>

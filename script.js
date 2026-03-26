@@ -6,7 +6,7 @@ const booksDatabase = [
         date: "Año, 2025",
         genre: "Literatura",
         price: 300,
-        description: "Novela de ficción y economía",
+        description: "Novela acerca de Marco Vidrio, un Dr. en economía que es alojado en la corporación Evoloma, para desarrollar el proyecto que puede aportar un nivel de organización más eficiente para la humanidad. El problema es que es la humanidad misma la que no está dispuesta a dar el paso decisivo para redescubrirse a sí misma. Los personajes que rodean al Dr. Vidrio muestran los perfiles de quienes, en la realidad, representan a esas voluntades que se esfuerzan por mantener el deterioro existencial de la especie que domina el mundo que habita.",
         cover: "imagenes/libro1.jpeg"
     },
     {
@@ -15,7 +15,7 @@ const booksDatabase = [
         date: "Año, 2015",
         genre: "Literatura",
         price: 300,
-        description: "Propuesta teórica para superar el tope trifásico económico-político-social.",
+        description: "La misión humana tiene un potencial trascendental por delante, pero lo único que aprovecha de dicha condición es el autosabotaje. En este libro se expone cómo funciona el Tope trifásico de operador político e-P-s (economía-política-sociedad) y como la reorientación hacia una voluntad Más que humana (>h), aportaría lo necesario para cambiar el paradigma civilizatorio",
         cover: "imagenes/libro2.jpeg"
     },
     {
@@ -24,7 +24,7 @@ const booksDatabase = [
         date: "Año, 2026",
         genre: "Literatura",
         price: 400,
-        description: "Propuesta teórica para consolidar la civilización humana, mediante un sistema económico.",
+        description: "Hasta el momento, la humanidad no cuenta con sistemas consolidades para ejercer funciones equiparables a la naturaleza. Ni en sus procedimientos de producción, ni en su economía, ni en su organización, ni en los residuos que produce, ni en ninguna de sus industrias, se refleja tal capacidad. El temperamento es el único elemento destacable de las funciones humanas. Para consolidar su civilización, es necesario implementar un sistema auténtico de organización. La propuesta de este libro puede comprenderse como un tejido necesario que requiere de otros tejidos para complementarse. El resultado será comprender que, el mencionado temperamento podrá ser asimilado por un sistema auténtico, pero los parámetros de organización permitirán que la presencia humana se mantenga a la cabeza del proceso evolutivo que aún tiene mucho que proporcionar.",
         cover: "imagenes/libro3.jpeg"
     }
 ];
